@@ -10,15 +10,10 @@ import json
 def aaa():
     data = {"pack": {"bid_point": 40, "accum_bid_point": 4, "prov_list": ["湖南省", "广东省"]}}
     list = ['pack', 'bid_point']
-    # with open('data.json', 'w') as f:
-    #     json.dump(data, f)
     with open('data.json', 'r') as f:
         data = json.load(f)
         value = JsonUtil.get_json_value(data, list)
         print(value)
-        # decodeJson(data, list)
-        # liststr =  '[\''+'\'][\''.join(list)+'\']'
-        # print(liststr)
 
 
 def decodeJson(data, keys):
